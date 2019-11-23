@@ -1,7 +1,8 @@
 <div>
     <a href="{% url 'app:photos_detail' photo.id %}">戻る</a>
 </div>
-<form action="{% url 'app:edit_photo' photo.id %}" method="POST">{% csrf_token %}
+<form action="{% url 'app:edit_photo' photo.id %}" method="POST">
+    {% csrf_token %}
     {{ form.as_p }}
     <button class="btn" type="submit">保存</button>
 </form>

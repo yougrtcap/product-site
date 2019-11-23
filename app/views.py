@@ -76,8 +76,8 @@ def photos_category(request, category):
 
 
 def edit_photo(request, pk):
-    form = PhotoForm()
     photo = get_object_or_404(Photo, pk=pk)
+    form = PhotoForm(instance=photo)
 
     if request.method == "POST":
         form = PhotoForm(request.POST, instance=photo)
