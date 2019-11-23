@@ -1,8 +1,30 @@
-<div>
-    <a href="{% url 'app:photos_detail' photo.id %}">戻る</a>
-</div>
-<form action="{% url 'app:edit_photo' photo.id %}" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button class="btn" type="submit">保存</button>
-</form>
+{% extends 'app/Base.html' %}
+
+
+
+
+{% block content %}
+
+    <div>
+        <a href="{% url 'app:index' %}">ホームに戻る</a>
+    </div>
+
+    <form action="{% url 'app:photos_new' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+        <table>
+            <tr>
+                <th>目標</th>
+                <td>{{ form.title }}</td>
+            </tr>
+            <tr>
+                <th>詳細</th>
+                <td>{{ form.comment }}</td>
+            </tr>
+            <tr>
+                <th>カテゴリー</th>
+                <td>{{ form.category }}</td>
+            </tr>
+        </table>
+        <button type="submit" class="btn">保存</button>
+    </form>
+
+{% endblock %}
