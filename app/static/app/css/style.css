@@ -7,6 +7,13 @@ h1 {
     text-align: center;
 }
 
+.user-name-title {
+    margin-right: 300px;
+    margin-left: 300px;
+    text-align: center;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
 body {
     margin-left: 100px;
     margin-right: 100px;

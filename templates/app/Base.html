@@ -18,8 +18,10 @@
             {% if request.user.is_authenticated %}
                 <a href="{% url 'app:users_detail' request.user.id %}">マイページ</a>
                 <a href="{% url 'app:logout' %}">ログアウト</a>
+                {#                <a href="{% url 'app:users_detail' photo.user.id %}">@{{ photo.user }}</a>　　ログイン中のアカウント名を出したい#}
             {% else %}
                 <a href="{% url 'app:login' %}">ログイン</a>
+                <a href="{% url 'app:signup' %}">アカウント登録</a>
             {% endif %}
             <hr>
 
