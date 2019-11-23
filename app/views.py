@@ -3,11 +3,12 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required  # 追加
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.decorators.http import require_POST  # 追加
 
 from .forms import PhotoForm
-from .models import Photo, Category
+from .models import Photo, Category, Nice
 
 
 # Create your views here.
@@ -88,3 +89,12 @@ def edit_photo(request, pk):
             form = PhotoForm(instance=photo)
 
     return render(request, 'app/edit_photo.html', {'form': form, 'photo': photo})
+
+
+def iine_iine(request, pk):
+    photo = get_object_or_404(Photo, pk=pk)
+    nice, _ = Nice.objects.get_or_create(photo=photo)
+    nice.number += 1
+    nice.save()
+    dict_response = {"status": "success"}
+    return JsonResponse(dict_response)

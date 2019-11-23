@@ -19,3 +19,8 @@ class Photo(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Nice(models.Model):
+    photo = models.ForeignKey(Photo, on_delete=models.CASCADE, primary_key=True)
+    number = models.IntegerField(default=0)
