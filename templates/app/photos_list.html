@@ -1,0 +1,17 @@
+<div class="photo-container">
+    {% for photo in photos %}
+        <div class="photo">
+            <a href="{% url 'app:photos_detail' photo.id %}">
+                <h2>{{ photo }}</h2>
+
+                <div class="photo-info">
+                    <p>{{ photo.created_at }}</p>
+                    <a href="{% url 'app:users_detail' photo.user.id %}">@{{ photo.user }}</a>
+                    <a href="{% url 'app:photos_category' category=photo.category %}"
+                       class="category">{{ photo.category }}</a>
+                </div>
+                <hr>
+            </a>
+        </div>
+    {% endfor %}
+</div>

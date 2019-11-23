@@ -1,0 +1,22 @@
+/*header {*/
+/*    border-bottom: solid 1px #000;*/
+/*    height: 70px;*/
+/*}*/
+h1 {
+    color: #00ffd1;
+    text-align: center;
+}
+
+body {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+h2 {
+    background-color: rgba(0, 255, 198, 0.2)
+}
+
+/*.photoinfo{background-color: rgba(0, 255, 209, 0.32)*/
+.container-1 {
+    background-color: rgba(0, 255, 163, 0.47)
+}
