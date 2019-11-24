@@ -27,8 +27,12 @@
 
             {#        <a href="{% url 'app:photos_category' category=photo.category %}"#}
             {#                    class="category">{{ photo.category }}</a>#}
-            <span class="button-topp"><a href="#">@{{ request.user.username }}</a></span>
-            <span class="button-topp"><a href="{% url 'app:photos_category' %}">つぶやきを見る</a></span>
+            {% if request.user.is_authenticated %}
+                <span class="button-topp">
+                    <a href="{% url 'app:users_detail' request.user.id %}">@{{ request.user.username }}</a>
+                </span>
+            {% endif %}
+            <span class="button-topp"><a href="{% url 'app:photos_category' "つぶやき" %}">つぶやきを見る</a></span>
         </div>
 
         {% for message in messages %}
