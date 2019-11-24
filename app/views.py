@@ -96,8 +96,7 @@ def edit_photo(request, pk):
 def iine_iine(request, pk):
     photo = get_object_or_404(Photo, pk=pk)
     nice, _ = Nice.objects.get_or_create(photo=photo)
-    nice.number += 1
-    nice.save()
+    nice.increment()
     dict_response = {"status": "success"}
     return JsonResponse(dict_response)
 #q[]とかでプリントさせる

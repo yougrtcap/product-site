@@ -18,6 +18,7 @@ header {
 .header-menu {
     text-align: left;
     margin-left: 150px;
+    margin-right: 150px;
     font-weight: bold;
 }
 
@@ -30,7 +31,7 @@ header {
 }
 
 .button-topp {
-
+    float: right;
     height: 35px;
     margin-right: 10px;
     /*background-color: yellow;*/

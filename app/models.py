@@ -24,3 +24,7 @@ class Photo(models.Model):
 class Nice(models.Model):
     photo = models.ForeignKey(Photo, on_delete=models.CASCADE, primary_key=True)
     number = models.IntegerField(default=0)
+
+    def increment(self):
+        self.number += 1
+        self.save()

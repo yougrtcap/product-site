@@ -5,13 +5,28 @@
                 <div class="fo">
                     <h2>{{ photo }}</h2>
                     <span>
+
                     <a href="{% url 'app:users_detail' photo.user.id %}" class="a100">@{{ photo.user }}</a>
                     <a href="{% url 'app:photos_category' category=photo.category %}"
                        class="category">{{ photo.category }}</a>
-                    <div class="time"> <p>{{ photo.created_at }}</p></div>
+                        <div class="time"> <p>{{ photo.created_at }} <span><label
+                                onclick="iine('{{ photo.id }}')">♡</label></span><span
+                                id="{{ photo.id }}">{{ photo.nice_set.first.number|default:0 }}</span></p></div>
                     </span>
                 </div>
             </a>
         </div>
     {% endfor %}
 </div>
+<script>
+    function iine(pk) {
+        $.ajax({
+            url: "/photos/" + pk + "/iine/",
+            success: function (result) {
+                num = Number($("#" + pk).text());
+                num++;
+                $("#" + pk).text(num);
+            }
+        });
+    }
+</script>
