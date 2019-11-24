@@ -1,8 +1,8 @@
 /*マージンはできるだけ使ってはいけません*/
 header {
-    background-color: rgba(255, 255, 0, 0.45);
+    background-color: rgba(253, 255, 0, 0.52);
     text-align: center;
-    border-radius: 50px;
+    border-radius: 10px;
     /*border-bottom: solid 1px #000;*/
     /*height: 70px;*/
 }
@@ -37,6 +37,16 @@ header {
     /*background-color: yellow;*/
     border-radius: 50px;
     background: linear-gradient(transparent 70%, rgba(160, 255, 253, 0.62) 70%);
+}
+
+.button-toppp {
+    float: right;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 30px;
+    background-color: #ffc1c6;
+    padding: auto;
+    margin: 0 0 0 0;
 }
 
 
@@ -181,6 +191,24 @@ p.comment {
 div.label1 {
     margin-left: 300px;
     margin-top: 50px;
+}
+
+.iine-btn {
+    position: relative;
+    background-color: rgba(188, 96, 138, 0);
+    border-radius: 4px;
+    color: #ff001c;
+    line-height: 52px;
+    -webkit-transition: none;
+    transition: none;
+    box-shadow: 0 3px 0 rgba(140, 4, 23, 0);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+
+.iine-btn:active {
+    top: 3px;
+    box-shadow: none;
+    color: #ff001c;
 }
 
 /*h2.user-name-title{*/

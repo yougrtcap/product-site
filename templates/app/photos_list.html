@@ -9,8 +9,8 @@
                     <a href="{% url 'app:users_detail' photo.user.id %}" class="a100">@{{ photo.user }}</a>
                     <a href="{% url 'app:photos_category' category=photo.category %}"
                        class="category">{{ photo.category }}</a>
-                        <div class="time"> <p>{{ photo.created_at }} <span><label
-                                onclick="iine('{{ photo.id }}')">♡</label></span><span
+                        <div class="time"> <p>{{ photo.created_at }} <span><label class="iine-btn"
+                                                                                  onclick="iine('{{ photo.id }}')">♡</label></span><span
                                 id="{{ photo.id }}">{{ photo.nice_set.first.number|default:0 }}</span></p></div>
                     </span>
                 </div>
