@@ -1,10 +1,13 @@
 
 {% extends 'app/base.html' %}
 {% block content %}
+    <div class="body-top">
     {% if category %}
-        <h2>カテゴリー：{{ category.title }} の検索結果</h2>
+        <h2>カテゴリー：{{ category.title }} の一覧</h2>
     {% else %}
         <h2>みんなの声</h2>
     {% endif %}
+    </div>
     {% include 'app/photos_list.html' %}
+
 {% endblock %}

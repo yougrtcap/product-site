@@ -1,29 +1,198 @@
-/*header {*/
-/*    border-bottom: solid 1px #000;*/
-/*    height: 70px;*/
-/*}*/
-h1 {
-    color: #00ffd1;
+/*マージンはできるだけ使ってはいけません*/
+header {
+    background-color: rgba(255, 255, 0, 0.45);
     text-align: center;
+    border-radius: 50px;
+    /*border-bottom: solid 1px #000;*/
+    /*height: 70px;*/
 }
 
-.user-name-title {
-    margin-right: 300px;
-    margin-left: 300px;
-    text-align: center;
-    background-color: antiquewhite;
-    border-radius: 10px;
-}
-body {
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-h2 {
-    background-color: rgba(0, 255, 198, 0.2)
-}
-
-/*.photoinfo{background-color: rgba(0, 255, 209, 0.32)*/
 .container-1 {
-    background-color: rgba(0, 255, 163, 0.47)
+    padding-bottom: 10px;
 }
+
+.titol {
+    font-size: 45px;
+}
+
+.header-menu {
+    text-align: left;
+    margin-left: 150px;
+    font-weight: bold;
+}
+
+.button-top {
+    height: 35px;
+    margin-right: 10px;
+    /*background-color: yellow;*/
+    border-radius: 50px;
+    background: linear-gradient(transparent 70%, #ffff00 70%);
+}
+
+span {
+    font-weight: bold;
+    /*display:block;*/
+    /*line-height:40px;*/
+    display: inline-block;
+}
+
+a {
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+.a100 {
+    background-color: rgba(193, 255, 0, 0.68);
+    border-radius: 30px;
+}
+
+p {
+    margin: 0;
+}
+
+.body-top {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.photo {
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+.fo {
+    border-bottom: solid;
+    border-color: rgb(255, 253, 61);
+    margin: 20px;
+    padding: 10px
+}
+
+.photo-center {
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+.time {
+    float: right;
+}
+
+/*マイページ*/
+.user-name-title {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.username {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.home {
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 19.92px;
+    font-weight: bold;
+}
+
+.form {
+    padding-left: 300px;
+    padding-top: 50px;
+    /*margin-right: 300px;*/
+}
+
+.comment {
+    text-align: center;
+}
+
+/*.photo-user_name{*/
+/*    margin-right: 100px;*/
+/*    margin-left: 100px;*/
+/*}*/
+.photo-detail {
+    /*margin-right: 100px;*/
+    margin-left: 100px;
+    /*font-size: 24px;*/
+    margin-top: 19.92px;
+}
+
+.photo-user_name {
+    font-size: 24px;
+    margin-top: 19.92px;
+}
+
+.form-signin {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+button {
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+btn {
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+a.btn {
+    font-size: 15px;
+}
+
+p.comment {
+    text-align: left;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    border-bottom: solid yellow;
+}
+
+.signup {
+    margin-left: 400px;
+    margin-top: 50px;
+}
+
+.label1 {
+    margin-left: 200px;
+}
+
+/*h2{*/
+/*    margin-right: 100px;*/
+/*    margin-left: 100px;*/
+/*    margin-top: 19.92px;*/
+/*    font-weight: bold;*/
+/*}*/
+
+.usernnma {
+    margin-left: 100px;
+}
+
+div.label1 {
+    margin-left: 300px;
+    margin-top: 50px;
+}
+
+/*h2.user-name-title{*/
+/*    border-radius:50px;*/
+/*    background: rgba(255, 255, 0, 0.59);*/
+/*align-self: center;*/
+/*.user-name-title {*/
+/*    margin-right: 300px;*/
+/*    margin-left: 300px;*/
+/*    text-align: center;*/
+/*    background-color: antiquewhite;*/
+/*    border-radius: 10px;*/
+/*}*/
+/*body {*/
+/*    margin-left: 100px;*/
+/*    margin-right: 100px;*/
+/*}*/
+
+/*h2 {*/
+/*    background-color: rgba(0, 255, 198, 0.2)*/
+/*}*/
+
+/*!*.photoinfo{background-color: rgba(0, 255, 209, 0.32)*!*/
+/*.container-1 {*/
+/*    background-color: rgba(0, 255, 163, 0.47)*/
+/*}*/

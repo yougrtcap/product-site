@@ -5,18 +5,18 @@
     <div class="photo-detail">
 
 
-        <div class="photo-info">
-            <a href="{% url 'app:users_detail' photo.user.id %}">@{{ photo.user }}</a>
+        <div>
+            <h2><a href="{% url 'app:users_detail' photo.user.id %}" class="photo-user_name">@{{ photo.user }}</a></h2>
         </div>
-
+        <div class="photo-center">
         <h2>{{ photo.title }}</h2>
-        <p>{{ photo.comment }}</p>
+            <p class="comment">{{ photo.comment }}</p>
         {% if request.user == photo.user %}
-            <button><a class="btn" href="{% url 'app:edit_photo' photo.pk %}">編集</a></button>
             <form method="post" action="{% url 'app:photos_delete' photo.id %}">{% csrf_token %}
+                <button><a class="btn" href="{% url 'app:edit_photo' photo.pk %}">編集</a></button>
                 <button class="btn" type="submit" onclick='return confirm("本当に削除しますか？");'>削除</button>
             </form>
         {% endif %}
     </div>
-
+    </div>
 {% endblock %}

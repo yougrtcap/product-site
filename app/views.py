@@ -55,7 +55,6 @@ def photos_new(request):
         form = PhotoForm()
     return render(request, 'app/photos_new.html', {'form': form})
 
-
 def photos_detail(request, pk):
     photo = get_object_or_404(Photo, pk=pk)
     return render(request, 'app/photos_detail.html', {'photo': photo})
@@ -73,7 +72,10 @@ def photos_category(request, category):
     category = Category.objects.get(title=category)
     # 取得したCategoryに属するPhoto一覧を取得
     photos = Photo.objects.filter(category=category).order_by('-created_at')
-    return render(request, 'app/index.html', {'photos': photos, 'category': category})
+    # いいね数を表示
+    p = Nice.objects.all()
+    pr = p[0].number
+    return render(request, 'app/index.html', {'photos': photos, 'category': category, 'pr': pr})
 
 
 def edit_photo(request, pk):
@@ -98,3 +100,4 @@ def iine_iine(request, pk):
     nice.save()
     dict_response = {"status": "success"}
     return JsonResponse(dict_response)
+#q[]とかでプリントさせる

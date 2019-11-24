@@ -11,20 +11,21 @@
 <body>
 <header>
     <div class="container-1">
-        <h1><a href="{% url 'app:index' %}">目標共有</a></h1>
+        <h1><a class="titol" href="{% url 'app:index' %}">目標共有</a></h1>
         <div class="header-menu">
-            <a href="{% url 'app:photos_new' %}">宣言する</a>
-            <a href="{% url 'app:index' %}">みんなの声</a>
+            <span class="button-top"><a href="{% url 'app:photos_new' %}">宣言する</a></span>
+            <span class="button-top"><a href="{% url 'app:index' %}">みんなの声</a></span>
             {% if request.user.is_authenticated %}
-                <a href="{% url 'app:users_detail' request.user.id %}">マイページ</a>
-                <a href="{% url 'app:logout' %}">ログアウト</a>
+                <span class="button-top"><a href="{% url 'app:users_detail' request.user.id %}">マイページ</a></span>
+                <span class="button-top"><a href="{% url 'app:logout' %}">ログアウト</a></span>
                 {#                <a href="{% url 'app:users_detail' photo.user.id %}">@{{ photo.user }}</a>　　ログイン中のアカウント名を出したい#}
             {% else %}
-                <a href="{% url 'app:login' %}">ログイン</a>
-                <a href="{% url 'app:signup' %}">アカウント登録</a>
+                <span class="button-top"><a href="{% url 'app:login' %}">ログイン</a></span>
+                <span class="button-top"><a href="{% url 'app:signup' %}">アカウント登録</a></span>
             {% endif %}
-            <hr>
-
+            <span class="button-top"><a href="{% url 'app:index' %}">Tweet</a></span>
+            {#        <a href="{% url 'app:photos_category' category=photo.category %}"#}
+            {#                    class="category">{{ photo.category }}</a>#}
         </div>
         {% for message in messages %}
             <p class="message-success">{{ message }}</p>

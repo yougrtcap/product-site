@@ -5,11 +5,11 @@
 
 {% block content %}
 
-    <div>
+    <div class="home">
         <a href="{% url 'app:index' %}">ホームに戻る</a>
     </div>
 
-    <form action="{% url 'app:photos_new' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+    <form action="{% url 'app:photos_new' %}" method="POST" enctype="multipart/form-data" class="form">{% csrf_token %}
         <table>
             <tr>
                 <th>目標</th>

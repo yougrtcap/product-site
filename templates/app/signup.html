@@ -1,9 +1,8 @@
 {% extends 'app/base.html' %}
 
 {% block content %}
-
-    <h2>ユーザー登録</h2>
-
+    <div class="usernnma"><h2>ユーザー登録</h2></div>
+    <div class="signup">
     <form method="post" action="{% url 'app:signup' %}">{% csrf_token %}
         <label>ユーザー名</label>
         {{ form.username }}
@@ -21,5 +20,5 @@
     </form>
 
     <p><a href="{% url 'app:login' %}">ログインはこちら</a></p>
-
+    </div>
 {% endblock %}
