@@ -23,10 +23,12 @@
                 <span class="button-top"><a href="{% url 'app:login' %}">ログイン</a></span>
                 <span class="button-top"><a href="{% url 'app:signup' %}">アカウント登録</a></span>
             {% endif %}
-            <span class="button-top"><a href="{% url 'app:index' %}">Tweet</a></span>
+
             {#        <a href="{% url 'app:photos_category' category=photo.category %}"#}
             {#                    class="category">{{ photo.category }}</a>#}
+            <span class="button-topp"><a href="{% url 'app:photos_category' %}">つぶやきを見る</a></span>
         </div>
+
         {% for message in messages %}
             <p class="message-success">{{ message }}</p>
         {% endfor %}

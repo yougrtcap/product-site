@@ -29,6 +29,16 @@ header {
     background: linear-gradient(transparent 70%, #ffff00 70%);
 }
 
+.button-topp {
+
+    height: 35px;
+    margin-right: 10px;
+    /*background-color: yellow;*/
+    border-radius: 50px;
+    background: linear-gradient(transparent 70%, rgba(160, 255, 253, 0.62) 70%);
+}
+
+
 span {
     font-weight: bold;
     /*display:block;*/
